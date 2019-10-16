@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".FilterActivity"
+    tools:showIn="@layout/activity_filter">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="15dp">
+
+        <TextView
+            android:id="@+id/tv_types"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Types:" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/tv_types">
+            <!-- name should be same as class of multiple selection spinner -->
+            <com.example.adopy_adoptapetnearby.UI_utilities.MultipleSelectionSpinner
+                android:id="@+id/typeSpinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_age"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_types"
+            android:layout_marginTop="10dp"
+            android:text="Age:"/>
+
+        <com.jaygoo.widget.RangeSeekBar
+            android:id="@+id/ageSeekBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_types"
+            android:layout_marginTop="15dp"
+            app:rsb_indicator_height="40dp"
+            app:rsb_indicator_margin="10dp"
+            app:rsb_indicator_show_mode="alwaysShowAfterTouch"
+            app:rsb_indicator_width="40dp"
+            app:rsb_max="25"
+            app:rsb_mode="range"
+            app:rsb_progress_color="@color/colorAccent"
+            app:rsb_progress_default_color="@color/rsbColorSeekBarDefault"
+            app:rsb_thumb_drawable="@drawable/rsb_default_thumb"
+            app:rsb_tick_mark_mode="number" />
+
+        <TextView
+            android:id="@+id/tv_distance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ageSeekBar"
+            android:layout_marginTop="10dp"
+            android:text="Distance in km:"/>
+
+        <com.jaygoo.widget.RangeSeekBar
+            android:id="@+id/distanceSeekBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ageSeekBar"
+            android:layout_marginTop="15dp"
+            app:rsb_indicator_height="40dp"
+            app:rsb_indicator_margin="10dp"
+            app:rsb_indicator_show_mode="alwaysShowAfterTouch"
+            app:rsb_indicator_width="40dp"
+            app:rsb_max="100"
+            app:rsb_mode="single"
+            app:rsb_progress_color="@color/colorAccent"
+            app:rsb_progress_default_color="@color/rsbColorSeekBarDefault"
+            app:rsb_thumb_drawable="@drawable/rsb_default_thumb"
+            app:rsb_tick_mark_mode="number" />
+
+        <org.honorato.multistatetogglebutton.MultiStateToggleButton
+            android:id="@+id/sex_mstb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/distanceSeekBar"
+            android:layout_marginTop="10dp"
+            app:values="@array/sex_array"
+            app:mstbColorNotPressedBackground="@android:color/white"
+            app:mstbColorNotPressedText="@android:color/holo_blue_dark"
+            app:mstbColorPressedBackground="@android:color/holo_blue_dark"
+            app:mstbColorPressedText="@android:color/black"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/sex_mstb"
+            android:layout_marginTop="@dimen/text_margin"
+            android:text="@string/large_text" />
+    </RelativeLayout>
+</android.support.v4.widget.NestedScrollView>
