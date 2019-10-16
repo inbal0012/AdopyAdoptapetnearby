@@ -89,6 +89,8 @@ public class FilterActivity extends AppCompatActivity {
         sp.setSex(getResources().getStringArray(R.array.sex_array)[sex_mstb.getValue()]);
         sp.setDistance(Math.round(distanceSeekbar.getLeftSeekBar().getProgress()));
 
-        Log.d(TAG, "savePreferences: \ntypes:" + sp.getTypes() + "\nage: " + sp.getAgeMin() + " - " + sp.getAgeMax() + "\nSex: " + sp.getSex() + "\nDistance: " + sp.getDistance());
+        String ans = "types:" + sp.getTypes() + "\nage: " + sp.getAgeMin() + " - " + sp.getAgeMax() + "\nSex: " + sp.getSex() + "\nDistance: " + sp.getDistance();
+        Log.d(TAG, "savePreferences: \n" + ans);
+        Toast.makeText(this, "" + ans, Toast.LENGTH_SHORT).show();
     }
 }
