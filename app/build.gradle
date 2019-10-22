@@ -31,10 +31,10 @@ dependencies {
     implementation 'com.github.bumptech.glide:glide:4.9.0'
 
     //firebase
-    implementation 'com.google.firebase:firebase-auth:19.1.0'
-    implementation 'com.google.firebase:firebase-storage:19.1.0'
-    implementation 'com.google.firebase:firebase-database:19.1.0'
-    implementation 'com.google.firebase:firebase-firestore:21.1.1'
+//    implementation 'com.google.firebase:firebase-auth:19.1.0'
+//    implementation 'com.google.firebase:firebase-storage:19.1.0'
+//    implementation 'com.google.firebase:firebase-database:19.1.0'
+//    implementation 'com.google.firebase:firebase-firestore:21.1.1'
 
     //gson
     implementation 'com.google.code.gson:gson:2.8.6'

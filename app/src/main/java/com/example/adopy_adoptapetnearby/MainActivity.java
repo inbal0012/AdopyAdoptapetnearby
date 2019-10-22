@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity
         });
 
         Button search = findViewById(R.id.searchBtn);
-        filter.setOnClickListener(new View.OnClickListener() {
+        search.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this, SearchActivity.class));

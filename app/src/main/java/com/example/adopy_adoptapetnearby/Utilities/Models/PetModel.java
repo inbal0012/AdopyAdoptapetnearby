@@ -1,8 +1,11 @@
 package com.example.adopy_adoptapetnearby.Utilities.Models;
 
+import com.example.adopy_adoptapetnearby.Utilities.Interfaces.Gender;
 import com.google.gson.annotations.SerializedName;
 
 public class PetModel {
+    @SerializedName("kind")
+    private String Kind;
     @SerializedName("name")
     private String Name;
     @SerializedName("bitmap")
@@ -16,13 +19,16 @@ public class PetModel {
     @SerializedName("immunized")
     private Boolean Immunized;
     @SerializedName("age")
-    private String Age;
+    private Double Age;
+    @SerializedName("gender")
+    private com.example.adopy_adoptapetnearby.Utilities.Interfaces.Gender Gender;
     @SerializedName("price")
     private String Price;
     @SerializedName("owner")
     private String PostOwner;
 
-    public PetModel(String name, String bitmap, String info, String date, String location, Boolean immunized, String age, String price, String postOwner) {
+    public PetModel(String kind, String name, String bitmap, String info, String date, String location, Boolean immunized, double age, String price, Gender gender, String postOwner) {
+        Kind = kind;
         Name = name;
         Bitmap = bitmap;
         Info = info;
@@ -31,10 +37,27 @@ public class PetModel {
         Immunized = immunized;
         Age = age;
         Price = price;
+        Gender = gender;
         PostOwner = postOwner;
     }
 
+    public PetModel(String kind, String name, Double age, Gender gender, String bitmap) {
+        Kind = kind;
+        Name = name;
+        Age = age;
+        Gender = gender;
+        Bitmap = bitmap;
+    }
+
     public PetModel() {
+    }
+
+    public String getKind() {
+        return Kind;
+    }
+
+    public void setKind(String kind) {
+        Kind = kind;
     }
 
     public String getPostOwner() {
@@ -93,11 +116,11 @@ public class PetModel {
         Immunized = immunized;
     }
 
-    public String getAge() {
+    public Double getAge() {
         return Age;
     }
 
-    public void setAge(String age) {
+    public void setAge(Double age) {
         Age = age;
     }
 

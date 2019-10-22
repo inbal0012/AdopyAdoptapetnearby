@@ -56,11 +56,14 @@ public class FilterActivity extends AppCompatActivity {
 
         ageSeekbar = findViewById(R.id.ageSeekBar);
         ageSeekbar.setIndicatorTextDecimalFormat("0");
+        ageSeekbar.setProgress(0, 25);
 
         distanceSeekbar = findViewById(R.id.distanceSeekBar);
         distanceSeekbar.setIndicatorTextDecimalFormat("0");
+        distanceSeekbar.setProgress(100);
 
         sex_mstb = findViewById(R.id.sex_mstb);
+        sex_mstb.setValue(2);
 
         Button saveBtn = findViewById(R.id.saveBtn);
         saveBtn.setOnClickListener(new View.OnClickListener() {
@@ -92,5 +95,7 @@ public class FilterActivity extends AppCompatActivity {
         String ans = "types:" + sp.getTypes() + "\nage: " + sp.getAgeMin() + " - " + sp.getAgeMax() + "\nSex: " + sp.getSex() + "\nDistance: " + sp.getDistance();
         Log.d(TAG, "savePreferences: \n" + ans);
         Toast.makeText(this, "" + ans, Toast.LENGTH_SHORT).show();
+
+        FilterActivity.this.finish();
     }
 }
