@@ -105,12 +105,17 @@
     </string>
     <string name="get_spinner_item">get spinner items</string>
 
-
     <string-array name="sex_array">
         <item>"Male"</item>
         <item>"Female"</item>
         <item>"Doesn't matter"</item>
     </string-array>
+
     <string name="title_activity_search">SearchActivity</string>
     <string name="action_search">search</string>
+
+    //pet card
+    <string name="price">Price:</string>
+    <string name="date">Date:</string>
+
 </resources>
