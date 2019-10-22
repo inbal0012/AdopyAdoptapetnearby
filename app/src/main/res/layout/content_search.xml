@@ -9,7 +9,7 @@
     tools:showIn="@layout/activity_search">
 
     <android.support.v7.widget.RecyclerView
-        android:paddingTop="40dp"
+        android:paddingTop="20dp"
         android:paddingStart="20dp"
         android:paddingEnd="20dp"
         android:id="@+id/recycler_home"
