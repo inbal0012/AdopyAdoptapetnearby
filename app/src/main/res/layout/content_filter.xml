@@ -33,14 +33,6 @@
                 android:layout_marginTop="10dp" />
         </RelativeLayout>
 
-        <TextView
-            android:id="@+id/tv_age"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/tv_types"
-            android:layout_marginTop="10dp"
-            android:text="Age:"/>
-
         <com.jaygoo.widget.RangeSeekBar
             android:id="@+id/ageSeekBar"
             android:layout_width="match_parent"
@@ -49,22 +41,23 @@
             android:layout_marginTop="15dp"
             app:rsb_indicator_height="40dp"
             app:rsb_indicator_margin="10dp"
-            app:rsb_indicator_show_mode="alwaysShowAfterTouch"
+            app:rsb_indicator_show_mode="alwaysShow"
             app:rsb_indicator_width="40dp"
             app:rsb_max="25"
             app:rsb_mode="range"
             app:rsb_progress_color="@color/colorAccent"
             app:rsb_progress_default_color="@color/rsbColorSeekBarDefault"
             app:rsb_thumb_drawable="@drawable/rsb_default_thumb"
-            app:rsb_tick_mark_mode="number" />
+            app:rsb_tick_mark_mode="number"/>
 
         <TextView
-            android:id="@+id/tv_distance"
+            android:id="@+id/tv_age"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/ageSeekBar"
+            android:layout_centerHorizontal="true"
             android:layout_marginTop="10dp"
-            android:text="Distance in km:"/>
+            android:text="Age:"/>
 
         <com.jaygoo.widget.RangeSeekBar
             android:id="@+id/distanceSeekBar"
@@ -74,7 +67,7 @@
             android:layout_marginTop="15dp"
             app:rsb_indicator_height="40dp"
             app:rsb_indicator_margin="10dp"
-            app:rsb_indicator_show_mode="alwaysShowAfterTouch"
+            app:rsb_indicator_show_mode="alwaysShow"
             app:rsb_indicator_width="40dp"
             app:rsb_max="100"
             app:rsb_mode="single"
@@ -83,11 +76,20 @@
             app:rsb_thumb_drawable="@drawable/rsb_default_thumb"
             app:rsb_tick_mark_mode="number" />
 
+        <TextView
+            android:id="@+id/tv_distance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/distanceSeekBar"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="Distance in km:"/>
+
         <org.honorato.multistatetogglebutton.MultiStateToggleButton
             android:id="@+id/sex_mstb"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/distanceSeekBar"
+            android:layout_below="@id/tv_distance"
             android:layout_marginTop="10dp"
             app:values="@array/sex_array"
             app:mstbColorNotPressedBackground="@android:color/white"

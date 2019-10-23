@@ -107,8 +107,8 @@
 
     <string-array name="sex_array">
         <item>"Male"</item>
-        <item>"Female"</item>
         <item>"Doesn't matter"</item>
+        <item>"Female"</item>
     </string-array>
 
     <string name="title_activity_search">SearchActivity</string>

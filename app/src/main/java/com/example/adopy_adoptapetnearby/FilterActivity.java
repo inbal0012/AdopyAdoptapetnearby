@@ -63,7 +63,7 @@ public class FilterActivity extends AppCompatActivity {
         distanceSeekbar.setProgress(100);
 
         sex_mstb = findViewById(R.id.sex_mstb);
-        sex_mstb.setValue(2);
+        sex_mstb.setValue(1);
 
         Button saveBtn = findViewById(R.id.saveBtn);
         saveBtn.setOnClickListener(new View.OnClickListener() {
