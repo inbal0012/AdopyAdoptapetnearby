@@ -1,15 +1,19 @@
 package com.example.adopy_adoptapetnearby.Utilities.Models;
 
+import android.graphics.Bitmap;
+
 import com.example.adopy_adoptapetnearby.Utilities.Interfaces.Gender;
 import com.google.gson.annotations.SerializedName;
 
-public class PetModel {
-    @SerializedName("kind")
-    private String Kind;
+import java.io.Serializable;
+
+public class PetModel implements Serializable {
     @SerializedName("name")
     private String Name;
+    @SerializedName("kind")
+    private String Kind;
     @SerializedName("bitmap")
-    private String Bitmap;
+    private android.graphics.Bitmap Bitmap;
     @SerializedName("info")
     private String Info;
     @SerializedName("date")
@@ -27,7 +31,7 @@ public class PetModel {
     @SerializedName("owner")
     private String PostOwner;
 
-    public PetModel(String kind, String name, String bitmap, String info, String date, String location, Boolean immunized, double age, String price, Gender gender, String postOwner) {
+    public PetModel(String kind, String name, Bitmap bitmap, String info, String date, String location, Boolean immunized, double age, String price, Gender gender, String postOwner) {
         Kind = kind;
         Name = name;
         Bitmap = bitmap;
@@ -41,7 +45,7 @@ public class PetModel {
         PostOwner = postOwner;
     }
 
-    public PetModel(String kind, String name, Double age, Gender gender, String bitmap) {
+    public PetModel(String kind, String name, Double age, Gender gender, Bitmap bitmap) {
         Kind = kind;
         Name = name;
         Age = age;
@@ -76,11 +80,11 @@ public class PetModel {
         Name = name;
     }
 
-    public String getBitmap() {
+    public Bitmap getBitmap() {
         return Bitmap;
     }
 
-    public void setBitmap(String  bitmap) {
+    public void setBitmap(Bitmap  bitmap) {
         Bitmap = bitmap;
     }
 

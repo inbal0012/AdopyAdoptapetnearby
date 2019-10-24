@@ -6,6 +6,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Filter;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
@@ -13,6 +14,7 @@ import com.example.adopy_adoptapetnearby.R;
 import com.example.adopy_adoptapetnearby.Utilities.Interfaces.CardListener;
 import com.example.adopy_adoptapetnearby.Utilities.Models.PetModel;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import de.hdodenhof.circleimageview.CircleImageView;
@@ -43,7 +45,7 @@ public class PetsAdapter extends RecyclerView.Adapter<PetsAdapter.ViewHolder>  {
     @Override
     public void onBindViewHolder(@NonNull ViewHolder viewHolder, int i) {
         PetModel petModel = petModelList.get(i);
-        if(!petModel.getBitmap().isEmpty()){
+        if(!petModel.getBitmap().toString().isEmpty()){
             Glide.with(context).load(petModel.getBitmap()).placeholder(R.drawable.foot).into(viewHolder.petImage);
         }
 
